@@ -14,35 +14,36 @@ import org.springframework.web.bind.annotation.ModelAttribute;
  */
 public class BaseService<T> {
 
-   protected ResponseResult<T> responseResult;
+    protected ResponseResult<T> responseResult;
 
     @Autowired
-   protected BaseRedisService baseRedisService;
+    protected BaseRedisService baseRedisService;
 
     @ModelAttribute
-    public void setResAnReq(){
+    public void setResAnReq() {
         this.responseResult = new ResponseResult<T>();
     }
 
-    protected ResponseResult setResultSuccess(T t){
+    protected ResponseResult setResultSuccess(T t) {
         responseResult.setCode(200);
         responseResult.setMessage("success");
         responseResult.setData(t);
         return responseResult;
     }
-    protected ResponseResult setResultSuccess(){
+
+    protected ResponseResult setResultSuccess() {
         responseResult.setCode(200);
         responseResult.setMessage("success");
         return responseResult;
     }
 
-    protected ResponseResult setResultSuccess(String message){
+    protected ResponseResult setResultSuccess(String message) {
         responseResult.setCode(200);
         responseResult.setMessage(message);
         return responseResult;
     }
 
-    protected ResponseResult setResultError(String message){
+    protected ResponseResult setResultError(String message) {
         responseResult.setCode(400);
         responseResult.setMessage(message);
         return responseResult;

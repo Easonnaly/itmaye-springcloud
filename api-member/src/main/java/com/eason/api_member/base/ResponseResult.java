@@ -17,8 +17,8 @@ public class ResponseResult<T> {
     private String message;
     private T data;
 
-    public ResponseResult(Integer code,String message){
-        this.code=code;
-        this.message=message;
+    public ResponseResult(Integer code, String message) {
+        this.code = code;
+        this.message = message;
     }
 }

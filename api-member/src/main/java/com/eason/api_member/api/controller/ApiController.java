@@ -18,20 +18,20 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("api")
-public class ApiController extends BaseService{
+public class ApiController extends BaseService {
     @Resource
     private ApiService apiService;
 
 
     @RequestMapping("test")
-    public Map<String,Object> test(Integer id,String name){
+    public Map<String, Object> test(Integer id, String name) {
         Map<String, Object> test = apiService.test(id, name);
         return test;
     }
 
     @RequestMapping("redis")
-    public ResponseResult testRedis(String key,String value){
-        baseRedisService.setString(key,value,null);
+    public ResponseResult testRedis(String key, String value) {
+        baseRedisService.setString(key, value, null);
         responseResult.setCode(200);
         responseResult.setMessage("success");
         return responseResult;

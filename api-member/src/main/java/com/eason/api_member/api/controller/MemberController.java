@@ -18,27 +18,28 @@ public class MemberController extends BaseService {
 
     /**
      * 描述信息
-        查询用户
+     * 查询用户
+     *
      * @param userId
      * @return com.eason.api_member.base.ResponseResult<com.eason.api_member.entity.UserEntity>
      * @author eason
      * @date 10:32 2019/11/7
      **/
     @RequestMapping("findById")
-    public ResponseResult getMember(Long userId){
+    public ResponseResult getMember(Long userId) {
         UserEntity user = memberService.findUserById(userId);
-        if (user==null){
-           return setResultError("no message");
+        if (user == null) {
+            return setResultError("no message");
         }
         return setResultSuccess(user);
     }
 
     @RequestMapping("register")
-    public ResponseResult registerUser(@RequestBody UserEntity userEntity){
+    public ResponseResult registerUser(@RequestBody UserEntity userEntity) {
         int i = memberService.addUser(userEntity);
-        if (i>0){
+        if (i > 0) {
             return setResultSuccess("注册成功");
-        }else {
+        } else {
             return setResultError("注册失败");
         }
     }

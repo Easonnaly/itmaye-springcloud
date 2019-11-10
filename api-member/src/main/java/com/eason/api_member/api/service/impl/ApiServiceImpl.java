@@ -14,13 +14,13 @@ import java.util.Map;
  * @date 2019/11/5 21:48
  */
 @Service
-public class ApiServiceImpl implements ApiService{
+public class ApiServiceImpl implements ApiService {
     @Override
     public Map<String, Object> test(Integer id, String name) {
-        Map<String,Object> result = new HashMap<>();
-        result.put("code",200);
-        result.put("message","success");
-        result.put("data",new String[]{"111","222",""+id,name});
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("message", "success");
+        result.put("data", new String[]{"111", "222", "" + id, name});
         return result;
     }
 }

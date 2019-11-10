@@ -1,0 +1,33 @@
+
+server:
+  port: 8763
+#  context-path: /message
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: message
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/eason-member?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  mail:
+#    host: smtp.163.com
+#    username: yushengjun2018@163.com
+#    password: itmayiedu644
+#    enable:  true
+#    smtp:
+#      auth: true
+#    starttls:
+#      enable: true
+#      required: true
+
