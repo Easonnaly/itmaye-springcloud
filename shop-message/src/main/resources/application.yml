@@ -5,7 +5,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://47.97.221.143:8761/eureka/
 spring:
   application:
     name: message
@@ -20,14 +20,14 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-#  mail:
-#    host: smtp.163.com
-#    username: yushengjun2018@163.com
-#    password: itmayiedu644
-#    enable:  true
-#    smtp:
-#      auth: true
-#    starttls:
-#      enable: true
-#      required: true
+  mail:
+    host: smtp.163.com
+    username: 18888046840@163.com
+    password: shenxiaodong123
+    enable:  true
+    smtp:
+      auth: true
+    starttls:
+      enable: true
+      required: true
 
